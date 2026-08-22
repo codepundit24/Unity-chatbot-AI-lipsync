@@ -1,0 +1,40 @@
+name: AI NPC Backend CI/CD Pipeline
+
+on:
+    push:
+        branches: ["main","master"]
+    pull_request:
+        branches: ["main", "master"]
+    
+
+jobs:
+    test-and-build:
+        runs-on: ubundtu-latest
+
+        steps:
+            # Repo code checkout
+            - name: Checkout Code
+              uses: actions/chekout@v4
+
+            #Python environment setup 
+            - name: Set up Python 3.10
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.10"
+            
+            # Dependencies installation
+            - name: Install Dependencies
+              run: |
+                 python -m pip install --upgrade pip
+                 pip install -r requirements.txt
+            
+            # Automated tests run
+            - name: Run Pytest
+              run: |
+                 pytest test_main.py
+            
+            # Verify if Docker image is being build or not
+            - name: Build Docker Image
+              run: | 
+                 docker build -t ainpc-backend:latest .
+            

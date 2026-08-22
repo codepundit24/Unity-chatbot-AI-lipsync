@@ -1,0 +1,82 @@
+# ===== Unity generated =====
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Mm]emoryCaptures/
+
+# Asset meta data should be tracked, but not these caches
+/[Aa]ssets/AssetStoreTools*
+
+# Visual Studio / IDE generated
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.vsconfig
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Packages — usually fine to keep, but lock file can be excluded if using UPM
+# /[Pp]ackages/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# ===== IMPORTANT: secrets =====
+
+*.env
+appsettings.json
+config.json
+
+# ===== Python / Backend =====
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ===== Backend Temporary & Audio Files =====
+*.wav
+*.mp3
+*.ogg
+received_audio.wav
+
+# ===== Docker & System =====
+.docker/
+*.log
