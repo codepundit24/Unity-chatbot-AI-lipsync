@@ -30,6 +30,8 @@ jobs:
             
             # Automated tests run
             - name: Run Pytest
+              env:
+                OPENAI_API_KEY: "sk-dummy-test-key-for-ci"
               run: |
                  pytest test_main.py
             
